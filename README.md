@@ -15,6 +15,7 @@ Le dashboard a été entièrement **redesigné et traduit en français** avec :
 
 👉 **[Guide de Démarrage Rapide](GUIDE_DEMARRAGE_RAPIDE.md)** | **[Détails des Améliorations](AMELIORATIONS_DASHBOARD.md)**
 
+App : https://crime-app-viz.streamlit.app/
 ---
 
 ## 🎯 Objectives
