@@ -972,8 +972,6 @@ with tab4:
         st.markdown("#### 📊 Statistiques")
         st.metric("Âge Moyen", f"{filtered_df['Vict Age'].mean():.1f} ans")
         st.metric("Âge Médian", f"{filtered_df['Vict Age'].median():.0f} ans")
-        st.metric("Âge Min", f"{filtered_df['Vict Age'].min():.0f} ans")
-        st.metric("Âge Max", f"{filtered_df['Vict Age'].max():.0f} ans")
         st.metric("Écart-type", f"{filtered_df['Vict Age'].std():.1f}")
     
     st.markdown("---")
@@ -1060,14 +1058,14 @@ with tab5:
         fig.update_layout(font=dict(size=12), title_font_size=16)
         st.plotly_chart(fig, use_container_width=True)
         
-        # Calculer le pourcentage d'armes
+        #Calcul du pourcentage d'incidents avec armes
         if 1 in weapon_counts.index:
             weapon_pct = (weapon_counts[1] / weapon_counts.sum() * 100)
         else:
             weapon_pct = 0
         
         if weapon_pct > 50:
-            st.error(f"⚠️ **{weapon_pct:.1f}%** des crimes impliquent des armes !")
+            st.error(f"⚠️ **{weapon_pct:.1f}%** des crimes impliquent des armes")
         elif weapon_pct > 30:
             st.warning(f"⚠️ **{weapon_pct:.1f}%** des crimes impliquent des armes")
         else:

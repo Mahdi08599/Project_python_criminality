@@ -145,7 +145,7 @@ def install_dependencies():
     print("=" * 80)
     
     if not os.path.exists('requirements.txt'):
-        print("❌ requirements.txt not found!")
+        print("❌ requirements.txt not found")
         return
     
     print("\n🔄 Running: pip install -r requirements.txt\n")
@@ -154,7 +154,7 @@ def install_dependencies():
         print("\n✅ Dependencies installed successfully!")
     except Exception as e:
         print(f"\n❌ Error installing dependencies: {e}")
-
+#view_visualizations
 def view_visualizations():
     """View generated visualizations"""
     print("\n📊 GENERATED VISUALIZATIONS")
