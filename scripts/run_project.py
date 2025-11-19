@@ -154,7 +154,7 @@ def install_dependencies():
         print("\n✅ Dependencies installed successfully!")
     except Exception as e:
         print(f"\n❌ Error installing dependencies: {e}")
-
+#view_visualizations
 def view_visualizations():
     """View generated visualizations"""
     print("\n📊 GENERATED VISUALIZATIONS")

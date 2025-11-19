@@ -1058,7 +1058,7 @@ with tab5:
         fig.update_layout(font=dict(size=12), title_font_size=16)
         st.plotly_chart(fig, use_container_width=True)
         
-        # Calculer le pourcentage d'armes
+        #Calcul du pourcentage d'incidents avec armes
         if 1 in weapon_counts.index:
             weapon_pct = (weapon_counts[1] / weapon_counts.sum() * 100)
         else:
