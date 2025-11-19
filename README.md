@@ -4,6 +4,17 @@
 
 This comprehensive data analysis project explores crime data from Los Angeles (2020 to Present), applying data science techniques including data cleaning, transformation, exploratory data analysis, and interactive visualization.
 
+### 🆕 **Version 2.0 - Dashboard Français Amélioré** (Novembre 2025)
+Le dashboard a été entièrement **redesigné et traduit en français** avec :
+- ✨ Interface moderne et professionnelle
+- 🎯 Filtres intelligents et intuitifs
+- 📊 6 onglets d'analyse thématiques
+- 💡 Insights automatiques
+- 🎨 Design avec gradients et animations
+- 📥 Export de données simplifié
+
+👉 **[Guide de Démarrage Rapide](GUIDE_DEMARRAGE_RAPIDE.md)** | **[Détails des Améliorations](AMELIORATIONS_DASHBOARD.md)**
+
 ---
 
 ## 🎯 Objectives
