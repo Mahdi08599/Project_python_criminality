@@ -11,23 +11,23 @@ import subprocess
 def print_banner():
     """Print project banner"""
     print("=" * 80)
-    print("🚔 CRIME DATA ANALYSIS PROJECT")
+    print(" CRIME DATA ANALYSIS PROJECT")
     print("=" * 80)
     print()
 
 def check_dependencies():
     """Check if required packages are installed"""
-    print("📦 Checking dependencies...")
+    print(" Checking dependencies...")
     try:
         import pandas
         import numpy
         import matplotlib
         import seaborn
         import sklearn
-        print("✅ All core dependencies are installed!")
+        print(" All core dependencies are installed!")
         return True
     except ImportError as e:
-        print(f"❌ Missing dependency: {e}")
+        print(f" Missing dependency: {e}")
         print("\n💡 Please run: pip install -r requirements.txt")
         return False
 
@@ -41,7 +41,7 @@ def check_streamlit():
 
 def check_data_files():
     """Check if data files exist"""
-    print("\n📁 Checking data files...")
+    print("\n Checking data files...")
     files = {
         'Raw Data': 'data/Crime_Data_from_2020_to_Present_50k.csv',
         'Cleaned Data': 'data/Crime_Data_Cleaned.csv',
@@ -51,9 +51,9 @@ def check_data_files():
     all_exist = True
     for name, file in files.items():
         if os.path.exists(file):
-            print(f"  ✅ {name}: {file}")
+            print(f" {name}: {file}")
         else:
-            print(f"  ❌ {name}: {file} (NOT FOUND)")
+            print(f" {name}: {file} (NOT FOUND)")
             all_exist = False
     
     return all_exist
@@ -63,38 +63,38 @@ def main_menu():
     print("\n" + "=" * 80)
     print("MAIN MENU")
     print("=" * 80)
-    print("\n1. 📊 Run Streamlit Dashboard")
-    print("2. 📓 Open Jupyter Notebooks")
-    print("3. 🔍 Check Project Status")
-    print("4. 📦 Install Dependencies")
-    print("5. ❌ Exit")
+    print("\n1.  Run Streamlit Dashboard")
+    print("2.  Open Jupyter Notebooks")
+    print("3.  Check Project Status")
+    print("4.  Install Dependencies")
+    print("5.  Exit")
     print()
 
 def run_streamlit():
     """Launch Streamlit dashboard"""
     if not check_streamlit():
-        print("\n❌ Streamlit is not installed!")
-        print("💡 Run: pip install streamlit")
+        print("\n Streamlit is not installed!")
+        print(" Run: pip install streamlit")
         return
     
     if not os.path.exists('streamlit_app.py'):
-        print("\n❌ streamlit_app.py not found!")
+        print("\n streamlit_app.py not found!")
         return
     
-    print("\n🚀 Launching Streamlit Dashboard...")
-    print("📌 Dashboard will open at: http://localhost:8501")
-    print("⚠️  Press Ctrl+C to stop the server\n")
+    print("\n Launching Streamlit Dashboard...")
+    print(" Dashboard will open at: http://localhost:8501")
+    print(" Press Ctrl+C to stop the server\n")
     
     try:
         subprocess.run(['streamlit', 'run', 'streamlit_app.py'])
     except KeyboardInterrupt:
-        print("\n\n✅ Dashboard stopped.")
+        print("\n\n Dashboard stopped.")
     except Exception as e:
-        print(f"\n❌ Error: {e}")
+        print(f"\n Error: {e}")
 
 def open_jupyter():
     """Open Jupyter notebooks"""
-    print("\n📓 Available Notebooks:")
+    print("\n Available Notebooks:")
     print("=" * 80)
     
     notebooks = [
@@ -107,12 +107,12 @@ def open_jupyter():
         status = "✅" if os.path.exists(nb) else "❌"
         print(f"  {i}. {status} {nb}")
     
-    print("\n💡 To open a notebook, run: jupyter notebook <filename>")
-    print("💡 Or run: jupyter lab (to open all notebooks)")
+    print("\n To open a notebook, run: jupyter notebook <filename>")
+    print(" Or run: jupyter lab (to open all notebooks)")
 
 def project_status():
     """Show project status"""
-    print("\n📊 PROJECT STATUS")
+    print("\n PROJECT STATUS")
     print("=" * 80)
     
     steps = [
@@ -127,11 +127,11 @@ def project_status():
         output_exists = os.path.exists(output_file) if output_file else True
         
         if nb_exists and output_exists:
-            status = "✅ COMPLETE"
+            status = " COMPLETE"
         elif nb_exists:
-            status = "⚠️  IN PROGRESS"
+            status = "  IN PROGRESS"
         else:
-            status = "❌ NOT STARTED"
+            status = " NOT STARTED"
         
         print(f"\n{status} - {step_name}")
         if notebook:
@@ -141,23 +141,23 @@ def project_status():
 
 def install_dependencies():
     """Install project dependencies"""
-    print("\n📦 Installing Dependencies...")
+    print("\n Installing Dependencies...")
     print("=" * 80)
     
     if not os.path.exists('requirements.txt'):
-        print("❌ requirements.txt not found")
+        print(" requirements.txt not found")
         return
     
-    print("\n🔄 Running: pip install -r requirements.txt\n")
+    print("\n Running: pip install -r requirements.txt\n")
     try:
         subprocess.run([sys.executable, '-m', 'pip', 'install', '-r', 'requirements.txt'])
-        print("\n✅ Dependencies installed successfully!")
+        print("\n Dependencies installed successfully!")
     except Exception as e:
-        print(f"\n❌ Error installing dependencies: {e}")
+        print(f"\n Error installing dependencies: {e}")
 #view_visualizations
 def view_visualizations():
     """View generated visualizations"""
-    print("\n📊 GENERATED VISUALIZATIONS")
+    print("\n GENERATED VISUALIZATIONS")
     print("=" * 80)
     
     viz_dir = 'visualizations'
@@ -168,11 +168,11 @@ def view_visualizations():
     viz_files = [f for f in os.listdir(viz_dir) if f.endswith('.png')]
     
     if not viz_files:
-        print("\n⚠️  No visualizations found!")
-        print("💡 Run the exploratory_data_analysis.ipynb notebook to generate visualizations")
+        print("\n  No visualizations found!")
+        print(" Run the exploratory_data_analysis.ipynb notebook to generate visualizations")
         return
     
-    print(f"\n✅ Found {len(viz_files)} visualizations:")
+    print(f"\n Found {len(viz_files)} visualizations:")
     for viz in sorted(viz_files):
         print(f"  • {viz}")
     
@@ -210,11 +210,11 @@ def main():
         elif choice == '4':
             install_dependencies()
         elif choice == '5':
-            print("\n👋 Thank you for using Crime Data Analysis Project!")
+            print("\n Thank you for using Crime Data Analysis Project!")
             print("=" * 80)
             break
         else:
-            print("\n❌ Invalid choice. Please try again.")
+            print("\n Invalid choice. Please try again.")
         
         input("\nPress Enter to continue...")
 
@@ -222,6 +222,6 @@ if __name__ == "__main__":
     try:
         main()
     except KeyboardInterrupt:
-        print("\n\n👋 Goodbye!")
+        print("\n\n Goodbye!")
     except Exception as e:
-        print(f"\n❌ An error occurred: {e}")
+        print(f"\n An error occurred: {e}")
