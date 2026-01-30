@@ -1,4 +1,4 @@
-# 🏗️ PROJECT ARCHITECTURE
+#  PROJECT ARCHITECTURE
 
 ## Crime Data Analysis - Los Angeles
 
@@ -6,7 +6,7 @@ Cette documentation décrit l'organisation complète du projet d'analyse des don
 
 ---
 
-## 📁 Structure du Projet
+##  Structure du Projet
 
 ```
 Project_python_criminality/
@@ -74,7 +74,7 @@ Project_python_criminality/
 
 ---
 
-## 🔄 Workflow du Projet
+##  Workflow du Projet
 
 ### 1️⃣ Phase de Préparation des Données
 ```
@@ -122,7 +122,7 @@ Interactive Dashboard
 
 ---
 
-## 📊 Détails des Composants
+##  Détails des Composants
 
 ### 📁 Data (data/)
 | Fichier | Taille | Description | Usage |
@@ -167,7 +167,7 @@ Interactive Dashboard
 
 ---
 
-## 🚀 Guide d'Utilisation
+##  Guide d'Utilisation
 
 ### Installation Initiale
 ```bash
@@ -212,7 +212,7 @@ python scripts/demo_predictions.py
 
 ---
 
-## 🔧 Configuration Requise
+##  Configuration Requise
 
 ### Environnement Python
 - **Python**: 3.8 ou supérieur
@@ -234,7 +234,7 @@ statsmodels >= 0.14.0    # Modèles statistiques
 
 ---
 
-## 📈 Métriques du Projet
+##  Métriques du Projet
 
 ### Statistiques des Données
 - **Total des enregistrements**: 50,000+
@@ -257,7 +257,7 @@ statsmodels >= 0.14.0    # Modèles statistiques
 
 ---
 
-## 🎯 Points d'Entrée du Projet
+##  Points d'Entrée du Projet
 
 ### Pour l'Analyse
 1. **Notebooks** → `notebooks/exploratory_data_analysis.ipynb`
@@ -278,7 +278,7 @@ statsmodels >= 0.14.0    # Modèles statistiques
 
 ---
 
-## 🔐 Sécurité & Bonnes Pratiques
+##  Sécurité & Bonnes Pratiques
 
 ### Fichiers Ignorés (.gitignore)
 ```
@@ -311,7 +311,7 @@ __pycache__/
 
 ---
 
-## 📞 Support & Contact
+##  Support & Contact
 
 ### Structure de l'Équipe
 - **Data Cleaning**: notebooks/data_cleaning.ipynb
@@ -329,7 +329,7 @@ __pycache__/
 
 ---
 
-## 🔄 Mise à Jour de l'Architecture
+##  Mise à Jour de l'Architecture
 
 **Dernière mise à jour**: 18 Novembre 2025  
 **Version du projet**: 1.0  
@@ -337,7 +337,7 @@ __pycache__/
 
 ---
 
-## 📝 Notes d'Architecture
+##  Notes d'Architecture
 
 ### Design Patterns Utilisés
 1. **Separation of Concerns**: Données, notebooks, scripts, docs séparés
@@ -359,6 +359,6 @@ __pycache__/
 
 ---
 
-**🎉 Architecture Complète et Organisée !**
+** Architecture Complète et Organisée !**
 
 Tous les composants sont clairement organisés et documentés pour une utilisation optimale.
