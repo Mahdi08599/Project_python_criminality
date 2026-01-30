@@ -4,7 +4,7 @@ Tableau de Bord d'Analyse de la Criminalité à Los Angeles
 Application web interactive pour explorer et visualiser les données de criminalité
 de Los Angeles de 2020 à aujourd'hui.
 
-📊 Ce projet analyse plus de 50 000 incidents criminels pour identifier les tendances,
+ Ce projet analyse plus de 50 000 incidents criminels pour identifier les tendances,
    les zones à risque et les patterns temporels.
 
 Auteur: Équipe d'Analyse de Données Criminelles
@@ -127,7 +127,7 @@ st.markdown("""
                 padding: 40px; border-radius: 20px; margin-bottom: 30px; 
                 box-shadow: 0 10px 30px rgba(0,0,0,0.2);'>
         <h1 style='color: white; text-align: center; margin: 0; font-size: 48px;'>
-            🚔 Tableau de Bord de la Criminalité à Los Angeles
+             Tableau de Bord de la Criminalité à Los Angeles
         </h1>
         <p style='color: white; text-align: center; font-size: 20px; margin: 15px 0 0 0;'>
             Analyse Interactive des Données Criminelles (2020 - Aujourd'hui)
@@ -138,13 +138,13 @@ st.markdown("""
 # Présentation du projet
 with st.expander("📖 À propos de ce projet - Cliquez pour en savoir plus", expanded=False):
     st.markdown("""
-    ### 🎯 Objectif du Projet
+    ###  Objectif du Projet
     
     Ce dashboard interactif permet d'explorer et d'analyser **plus de 50 000 incidents criminels** 
     survenus à Los Angeles depuis 2020. Notre objectif est de fournir des insights clairs et 
     actionnables sur la criminalité urbaine.
     
-    ### 📊 Ce que vous découvrirez :
+    ###  Ce que vous découvrirez :
     
     - **Vue d'ensemble** : Distribution des types de crimes et leur gravité
     - **Analyse Géographique** : Zones les plus touchées et cartographie des incidents
@@ -153,14 +153,14 @@ with st.expander("📖 À propos de ce projet - Cliquez pour en savoir plus", ex
     - **Analyse des Armes** : Implication d'armes dans les crimes
     - **Corrélations** : Relations entre population, revenus et criminalité
     
-    ### 🛠️ Fonctionnalités :
+    ###  Fonctionnalités :
     
-    ✅ **Filtres interactifs** pour personnaliser votre analyse  
-    ✅ **Visualisations dynamiques** avec graphiques interactifs  
-    ✅ **Statistiques en temps réel** basées sur vos sélections  
-    ✅ **Export des données** filtrées au format CSV
+     **Filtres interactifs** pour personnaliser votre analyse  
+     **Visualisations dynamiques** avec graphiques interactifs  
+     **Statistiques en temps réel** basées sur vos sélections  
+     **Export des données** filtrées au format CSV
     
-    ### 📝 Comment utiliser ce dashboard :
+    ###  Comment utiliser ce dashboard :
     
     1. **Utilisez les filtres** dans la barre latérale gauche pour sélectionner vos critères
     2. **Explorez les onglets** pour découvrir différentes analyses
@@ -168,16 +168,16 @@ with st.expander("📖 À propos de ce projet - Cliquez pour en savoir plus", ex
     4. **Téléchargez les données** filtrées si besoin
     
     ---
-    💡 **Astuce** : Commencez avec tous les filtres actifs, puis affinez progressivement votre recherche !
+    **Astuce** : Commencez avec tous les filtres actifs, puis affinez progressivement votre recherche !
     """)
 
 st.markdown("<br>", unsafe_allow_html=True)
 
 # Chargement des données avec animation
-with st.spinner('🔄 Chargement des données criminelles en cours...'):
+with st.spinner(' Chargement des données criminelles en cours...'):
     df = load_data()
 
-st.success(f"✅ **{len(df):,} incidents** chargés avec succès !")
+st.success(f" **{len(df):,} incidents** chargés avec succès !")
 
 # =====================================
 # PANNEAU DE FILTRES (SIDEBAR)
@@ -193,7 +193,7 @@ st.sidebar.markdown("""
     """, unsafe_allow_html=True)
 
 # Filtre par Année
-st.sidebar.markdown("### 📅 Période d'Analyse")
+st.sidebar.markdown("### Période d'Analyse")
 years = sorted(df['year'].unique())
 selected_years = st.sidebar.multiselect(
     "Sélectionnez la/les année(s) :",
@@ -205,7 +205,7 @@ selected_years = st.sidebar.multiselect(
 st.sidebar.markdown("---")
 
 # Filtre par Zone géographique
-st.sidebar.markdown("### 📍 Zones Géographiques")
+st.sidebar.markdown("###  Zones Géographiques")
 areas = sorted(df['AREA NAME'].unique())
 area_selection_mode = st.sidebar.radio(
     "Mode de sélection des zones :",
@@ -230,7 +230,7 @@ else:
 st.sidebar.markdown("---")
 
 # Filtre par Catégorie de Crime
-st.sidebar.markdown("### 🚨 Types de Crimes")
+st.sidebar.markdown("###  Types de Crimes")
 crime_categories = sorted(df['crime_category'].unique())
 selected_categories = st.sidebar.multiselect(
     "Sélectionnez les catégories :",
@@ -242,7 +242,7 @@ selected_categories = st.sidebar.multiselect(
 st.sidebar.markdown("---")
 
 # Filtre par Période de la Journée
-st.sidebar.markdown("### ⏰ Moment de la Journée")
+st.sidebar.markdown("###  Moment de la Journée")
 time_periods = sorted(df['time_period'].unique())
 selected_time_periods = st.sidebar.multiselect(
     "Sélectionnez les plages horaires :",
@@ -254,7 +254,7 @@ selected_time_periods = st.sidebar.multiselect(
 st.sidebar.markdown("---")
 
 # Filtre supplémentaire : Implication d'armes
-st.sidebar.markdown("### 🔫 Armes")
+st.sidebar.markdown("###  Armes")
 weapon_filter = st.sidebar.selectbox(
     "Filtrer par armes :",
     options=["Tous", "Avec armes uniquement", "Sans armes uniquement"],
@@ -278,12 +278,12 @@ elif weapon_filter == "Sans armes uniquement":
 st.sidebar.markdown("---")
 
 # Résumé des filtres appliqués
-st.sidebar.markdown("### 📊 Résultat du Filtrage")
+st.sidebar.markdown("###  Résultat du Filtrage")
 st.sidebar.markdown(f"""
     <div style='background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); 
                 padding: 15px; border-radius: 10px; color: white;'>
         <p style='margin: 0; font-size: 16px; font-weight: bold;'>
-            📈 {len(filtered_df):,} incidents
+             {len(filtered_df):,} incidents
         </p>
         <p style='margin: 5px 0 0 0; font-size: 14px;'>
             sur {len(df):,} au total
@@ -296,13 +296,13 @@ st.sidebar.markdown(f"""
 
 # Bouton de réinitialisation
 st.sidebar.markdown("<br>", unsafe_allow_html=True)
-if st.sidebar.button("🔄 Réinitialiser tous les filtres", use_container_width=True):
+if st.sidebar.button(" Réinitialiser tous les filtres", use_container_width=True):
     st.rerun()
 
 # =====================================
 # INDICATEURS CLÉS (KPIs)
 # =====================================
-st.markdown("## 📊 Indicateurs Clés en un Coup d'Œil")
+st.markdown("##  Indicateurs Clés en un Coup d'Œil")
 st.markdown("<br>", unsafe_allow_html=True)
 
 # Calcul des métriques
@@ -321,9 +321,9 @@ with col1:
     <div style='background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
                 padding: 25px; border-radius: 15px; text-align: center; color: white; box-shadow: 0 8px 16px rgba(0,0,0,0.2);
                 transition: transform 0.3s ease;'>
-        <h3 style='margin: 0; font-size: 15px; font-weight: 500; opacity: 0.9;'>🔢 Total des Crimes</h3>
+        <h3 style='margin: 0; font-size: 15px; font-weight: 500; opacity: 0.9;'> Total des Crimes</h3>
         <h1 style='margin: 10px 0; font-size: 38px; font-weight: bold;'>{total_crimes:,}</h1>
-        <p style='margin: 0; font-size: 13px; opacity: 0.85;'>📊 {total_percentage:.1f}% du total</p>
+        <p style='margin: 0; font-size: 13px; opacity: 0.85;'> {total_percentage:.1f}% du total</p>
     </div>
     """, unsafe_allow_html=True)
 
@@ -351,7 +351,7 @@ with col4:
     st.markdown(f"""
     <div style='background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); 
                 padding: 25px; border-radius: 15px; text-align: center; color: white; box-shadow: 0 8px 16px rgba(0,0,0,0.2);'>
-        <h3 style='margin: 0; font-size: 15px; font-weight: 500; opacity: 0.9;'>📍 Zones Touchées</h3>
+        <h3 style='margin: 0; font-size: 15px; font-weight: 500; opacity: 0.9;'> Zones Touchées</h3>
         <h1 style='margin: 10px 0; font-size: 38px; font-weight: bold;'>{unique_areas}</h1>
         <p style='margin: 0; font-size: 13px; opacity: 0.85;'>quartiers concernés</p>
     </div>
@@ -361,7 +361,7 @@ with col5:
     st.markdown(f"""
     <div style='background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); 
                 padding: 25px; border-radius: 15px; text-align: center; color: white; box-shadow: 0 8px 16px rgba(0,0,0,0.2);'>
-        <h3 style='margin: 0; font-size: 15px; font-weight: 500; opacity: 0.9;'>⏱️ Délai Moyen</h3>
+        <h3 style='margin: 0; font-size: 15px; font-weight: 500; opacity: 0.9;'> Délai Moyen</h3>
         <h1 style='margin: 10px 0; font-size: 38px; font-weight: bold;'>{avg_delay:.1f}</h1>
         <p style='margin: 0; font-size: 13px; opacity: 0.85;'>jours pour signaler</p>
     </div>
@@ -371,7 +371,7 @@ st.markdown("<br><br>", unsafe_allow_html=True)
 
 # Message d'alerte si pas de données
 if len(filtered_df) == 0:
-    st.error("⚠️ Aucune donnée ne correspond aux filtres sélectionnés. Veuillez ajuster vos critères.")
+    st.error(" Aucune donnée ne correspond aux filtres sélectionnés. Veuillez ajuster vos critères.")
     st.stop()
 
 st.markdown("---")
@@ -392,14 +392,14 @@ tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
 # ONGLET 1 : VUE D'ENSEMBLE
 # =====================================
 with tab1:
-    st.markdown("## 📊 Distribution Générale des Crimes")
+    st.markdown("##  Distribution Générale des Crimes")
     st.markdown("*Aperçu complet de la répartition des crimes par catégorie et type*")
     st.markdown("<br>", unsafe_allow_html=True)
     
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("### 🎯 Répartition par Catégorie")
+        st.markdown("###  Répartition par Catégorie")
         category_counts = filtered_df['crime_category'].value_counts()
         
         fig = px.pie(
@@ -424,13 +424,13 @@ with tab1:
         st.plotly_chart(fig, use_container_width=True)
         
         st.info(f"""
-        **💡 Insight :** La catégorie la plus fréquente est 
+        **Insight :** La catégorie la plus fréquente est 
         **{category_counts.index[0]}** avec {category_counts.values[0]:,} cas 
         ({category_counts.values[0]/category_counts.sum()*100:.1f}% du total).
         """)
     
     with col2:
-        st.markdown("### 🔝 Top 10 des Types de Crimes")
+        st.markdown("###  Top 10 des Types de Crimes")
         top_crimes = filtered_df['Crm Cd Desc'].value_counts().head(10)
         
         fig = px.bar(
@@ -453,14 +453,14 @@ with tab1:
         st.plotly_chart(fig, use_container_width=True)
         
         st.info(f"""
-        **💡 Insight :** Le crime le plus commun est 
+        ** Insight :** Le crime le plus commun est 
         **{top_crimes.index[0]}** avec {top_crimes.values[0]:,} incidents.
         """)
     
     st.markdown("---")
     
     # Gravité des crimes
-    st.markdown("### ⚠️ Analyse de la Gravité des Crimes")
+    st.markdown("###  Analyse de la Gravité des Crimes")
     st.markdown("*Classification des incidents selon leur niveau de sévérité*")
     st.markdown("<br>", unsafe_allow_html=True)
     
@@ -488,7 +488,7 @@ with tab1:
         st.plotly_chart(fig, use_container_width=True)
     
     with col4:
-        st.markdown("#### 📋 Tableau Récapitulatif")
+        st.markdown("####  Tableau Récapitulatif")
         stats_df = filtered_df[['crime_category', 'crime_severity']].value_counts().head(10).reset_index()
         stats_df.columns = ['Catégorie', 'Gravité', 'Nombre']
         st.dataframe(
@@ -501,10 +501,10 @@ with tab1:
         <div style='background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
                     padding: 15px; border-radius: 10px; color: white; margin-top: 20px;'>
             <p style='margin: 0; font-size: 14px; font-weight: bold;'>
-                📊 Total Catégories : {filtered_df['crime_category'].nunique()}
+                 Total Catégories : {filtered_df['crime_category'].nunique()}
             </p>
             <p style='margin: 5px 0 0 0; font-size: 14px;'>
-                🎯 Types Uniques : {filtered_df['Crm Cd Desc'].nunique()}
+                 Types Uniques : {filtered_df['Crm Cd Desc'].nunique()}
             </p>
         </div>
         """, unsafe_allow_html=True)
@@ -513,14 +513,14 @@ with tab1:
 # ONGLET 2 : ANALYSE GÉOGRAPHIQUE
 # =====================================
 with tab2:
-    st.markdown("## 🗺️ Distribution Géographique des Crimes")
+    st.markdown("##  Distribution Géographique des Crimes")
     st.markdown("*Analyse spatiale pour identifier les zones à risque*")
     st.markdown("<br>", unsafe_allow_html=True)
     
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.markdown("### 📍 Top 15 des Zones les Plus Touchées")
+        st.markdown("###  Top 15 des Zones les Plus Touchées")
         top_areas = filtered_df['AREA NAME'].value_counts().head(15)
         
         fig = px.bar(
@@ -550,7 +550,7 @@ with tab2:
         """)
     
     with col2:
-        st.markdown("### 📊 Statistiques par Zone")
+        st.markdown("###  Statistiques par Zone")
         area_stats = filtered_df.groupby('AREA NAME').agg({
             'DR_NO': 'count',
             'area_risk_score': 'mean',
@@ -562,20 +562,20 @@ with tab2:
         st.dataframe(area_stats, use_container_width=True, height=500)
         
         st.success(f"""
-        📈 **{unique_areas} zones différentes** sont représentées dans les données filtrées.
+         **{unique_areas} zones différentes** sont représentées dans les données filtrées.
         """)
     
     st.markdown("---")
     
     # Carte de densité criminelle
-    st.markdown("### 🗺️ Carte Interactive des Incidents")
+    st.markdown("###  Carte Interactive des Incidents")
     st.markdown("*Visualisation géographique des emplacements de crimes*")
     
     # Échantillonnage pour performance
     map_data = filtered_df[['LAT', 'LON', 'crime_category']].dropna()
     if len(map_data) > 5000:
         map_data = map_data.sample(5000)
-        st.info(f"ℹ️ Pour des performances optimales, affichage d'un échantillon de 5 000 incidents sur {len(filtered_df[['LAT', 'LON']].dropna()):,}")
+        st.info(f" Pour des performances optimales, affichage d'un échantillon de 5 000 incidents sur {len(filtered_df[['LAT', 'LON']].dropna()):,}")
     
     fig = px.scatter_mapbox(
         map_data,
@@ -598,7 +598,7 @@ with tab2:
     st.markdown("---")
     
     # Comparaison des zones
-    st.markdown("### 📊 Comparaison des Catégories par Zone")
+    st.markdown("###  Comparaison des Catégories par Zone")
     st.markdown("*Top 5 des zones avec répartition détaillée par type de crime*")
     
     top_5_areas = filtered_df['AREA NAME'].value_counts().head(5).index
@@ -628,12 +628,12 @@ with tab2:
 # ONGLET 3 : TENDANCES TEMPORELLES
 # =====================================
 with tab3:
-    st.markdown("## ⏰ Analyse Temporelle des Crimes")
+    st.markdown("##  Analyse Temporelle des Crimes")
     st.markdown("*Découvrez les patterns et tendances dans le temps*")
     st.markdown("<br>", unsafe_allow_html=True)
     
     # Série temporelle
-    st.markdown("### 📈 Évolution des Crimes dans le Temps")
+    st.markdown("###  Évolution des Crimes dans le Temps")
     
     col_agg1, col_agg2 = st.columns([3, 1])
     
@@ -696,22 +696,22 @@ with tab3:
     # Stats de la série temporelle
     col_stat1, col_stat2, col_stat3, col_stat4 = st.columns(4)
     with col_stat1:
-        st.metric("📊 Moyenne", f"{time_series.mean():.0f}", help="Nombre moyen de crimes par période")
+        st.metric(" Moyenne", f"{time_series.mean():.0f}", help="Nombre moyen de crimes par période")
     with col_stat2:
-        st.metric("📈 Maximum", f"{time_series.max():.0f}", help="Pic maximum de crimes")
+        st.metric(" Maximum", f"{time_series.max():.0f}", help="Pic maximum de crimes")
     with col_stat3:
-        st.metric("📉 Minimum", f"{time_series.min():.0f}", help="Minimum de crimes")
+        st.metric(" Minimum", f"{time_series.min():.0f}", help="Minimum de crimes")
     with col_stat4:
-        st.metric("📏 Écart-type", f"{time_series.std():.0f}", help="Variabilité des données")
+        st.metric(" Écart-type", f"{time_series.std():.0f}", help="Variabilité des données")
     
     st.markdown("---")
     
     # Patterns temporels
-    st.markdown("### 📅 Patterns Cycliques")
+    st.markdown("###  Patterns Cycliques")
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        st.markdown("#### 📆 Par Jour de la Semaine")
+        st.markdown("####  Par Jour de la Semaine")
         day_order = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
         day_names_fr = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche']
         day_counts = filtered_df['day_name'].value_counts().reindex(day_order)
@@ -730,10 +730,10 @@ with tab3:
         st.plotly_chart(fig, use_container_width=True)
         
         max_day_idx = day_counts.values.argmax()
-        st.caption(f"🔝 Jour le plus criminel : **{day_names_fr[max_day_idx]}**")
+        st.caption(f" Jour le plus criminel : **{day_names_fr[max_day_idx]}**")
     
     with col2:
-        st.markdown("#### 📅 Par Mois")
+        st.markdown("####  Par Mois")
         month_order = ['January', 'February', 'March', 'April', 'May', 'June',
                        'July', 'August', 'September', 'October', 'November', 'December']
         month_names_fr = ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Jun',
@@ -752,10 +752,10 @@ with tab3:
         st.plotly_chart(fig, use_container_width=True)
         
         max_month_idx = month_counts.values.argmax()
-        st.caption(f"🔝 Mois le plus criminel : **{month_names_fr[max_month_idx]}**")
+        st.caption(f" Mois le plus criminel : **{month_names_fr[max_month_idx]}**")
     
     with col3:
-        st.markdown("#### 🕐 Par Heure")
+        st.markdown("####  Par Heure")
         hour_counts = filtered_df['hour'].value_counts().sort_index()
         
         fig = px.line(
@@ -770,20 +770,20 @@ with tab3:
         st.plotly_chart(fig, use_container_width=True)
         
         max_hour = hour_counts.idxmax()
-        st.caption(f"🔝 Heure la plus criminelle : **{max_hour}h**")
+        st.caption(f" Heure la plus criminelle : **{max_hour}h**")
     
     st.markdown("---")
     
     # Analyse par période de la journée
-    st.markdown("### 🌅 Distribution par Moment de la Journée")
+    st.markdown("###  Distribution par Moment de la Journée")
     
     col_period1, col_period2 = st.columns([2, 1])
     
     with col_period1:
         time_period_order = ['Night (00:00-05:59)', 'Morning (06:00-11:59)',
                              'Afternoon (12:00-17:59)', 'Evening (18:00-23:59)']
-        time_names_fr = ['🌙 Nuit\n(00h-06h)', '🌅 Matin\n(06h-12h)', 
-                        '☀️ Après-midi\n(12h-18h)', '🌆 Soirée\n(18h-00h)']
+        time_names_fr = [' Nuit\n(00h-06h)', 'Matin\n(06h-12h)', 
+                        ' Après-midi\n(12h-18h)', ' Soirée\n(18h-00h)']
         time_counts = filtered_df['time_period'].value_counts().reindex(time_period_order)
         
         fig = px.bar(
@@ -800,7 +800,7 @@ with tab3:
         st.plotly_chart(fig, use_container_width=True)
     
     with col_period2:
-        st.markdown("#### 💡 Insights Clés")
+        st.markdown("####  Insights Clés")
         max_period_idx = time_counts.values.argmax()
         min_period_idx = time_counts.values.argmin()
         
@@ -810,7 +810,7 @@ with tab3:
         st.markdown(f"""
         <div style='background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); 
                     padding: 15px; border-radius: 10px; color: white; margin-bottom: 10px;'>
-            <p style='margin: 0; font-size: 14px;'><b>🔝 Période la plus risquée :</b></p>
+            <p style='margin: 0; font-size: 14px;'><b> Période la plus risquée :</b></p>
             <p style='margin: 5px 0 0 0; font-size: 16px; font-weight: bold;'>
                 {max_period_name}
             </p>
@@ -823,7 +823,7 @@ with tab3:
         st.markdown(f"""
         <div style='background: linear-gradient(135deg, #30cfd0 0%, #330867 100%); 
                     padding: 15px; border-radius: 10px; color: white;'>
-            <p style='margin: 0; font-size: 14px;'><b>✅ Période la plus sûre :</b></p>
+            <p style='margin: 0; font-size: 14px;'><b> Période la plus sûre :</b></p>
             <p style='margin: 5px 0 0 0; font-size: 16px; font-weight: bold;'>
                 {min_period_name}
             </p>
@@ -836,7 +836,7 @@ with tab3:
     st.markdown("---")
     
     # Heatmap jour vs heure
-    st.markdown("### 🔥 Carte de Chaleur : Jour × Heure")
+    st.markdown("###  Carte de Chaleur : Jour × Heure")
     st.markdown("*Visualisation des périodes les plus criminelles*")
     
     heatmap_data = pd.crosstab(filtered_df['day_name'], filtered_df['hour'])
@@ -862,7 +862,7 @@ with tab3:
     st.plotly_chart(fig, use_container_width=True)
     
     st.info("""
-    💡 **Comment lire cette carte :** Les zones plus foncées (rouge) indiquent des périodes 
+     **Comment lire cette carte :** Les zones plus foncées (rouge) indiquent des périodes 
     avec plus de crimes, tandis que les zones claires (jaune) représentent des périodes plus calmes.
     """)
 
@@ -870,18 +870,18 @@ with tab3:
 # ONGLET 4 : PROFIL DES VICTIMES
 # =====================================
 with tab4:
-    st.markdown("## 👥 Analyse Démographique des Victimes")
+    st.markdown("##  Analyse Démographique des Victimes")
     st.markdown("*Qui sont les victimes de crimes à Los Angeles ?*")
     st.markdown("<br>", unsafe_allow_html=True)
     
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("### 📊 Distribution par Tranche d'Âge")
+        st.markdown("###  Distribution par Tranche d'Âge")
         age_order = ['Child (0-17)', 'Young Adult (18-34)', 'Middle Age (35-49)', 
                      'Senior (50-64)', 'Elderly (65+)']
-        age_names_fr = ['👶 Enfants\n(0-17 ans)', '🧑 Jeunes Adultes\n(18-34 ans)', 
-                       '👨 Adultes\n(35-49 ans)', '👴 Seniors\n(50-64 ans)', '🧓 Âgés\n(65+ ans)']
+        age_names_fr = [' Enfants\n(0-17 ans)', ' Jeunes Adultes\n(18-34 ans)', 
+                       ' Adultes\n(35-49 ans)', ' Seniors\n(50-64 ans)', ' Âgés\n(65+ ans)']
         age_counts = filtered_df['victim_age_group'].value_counts()
         age_counts = age_counts.reindex([a for a in age_order if a in age_counts.index])
         
@@ -908,10 +908,10 @@ with tab4:
         st.plotly_chart(fig, use_container_width=True)
         
         most_affected_age = age_labels_fr[0] if len(age_labels_fr) > 0 else "N/A"
-        st.info(f"👥 **Groupe le plus touché :** {most_affected_age} avec {age_counts.values[0]:,} victimes")
+        st.info(f" **Groupe le plus touché :** {most_affected_age} avec {age_counts.values[0]:,} victimes")
     
     with col2:
-        st.markdown("### 🚻 Répartition par Genre")
+        st.markdown("###  Répartition par Genre")
         sex_counts = filtered_df['Vict Sex'].value_counts().head(5)
         
         # Mapping genre en français
@@ -943,12 +943,12 @@ with tab4:
         if len(sex_counts) > 0:
             top_gender = sex_labels_fr[0]
             top_pct = (sex_counts.values[0] / sex_counts.sum() * 100)
-            st.info(f"👤 **Genre majoritaire :** {top_gender} ({top_pct:.1f}%)")
+            st.info(f" **Genre majoritaire :** {top_gender} ({top_pct:.1f}%)")
     
     st.markdown("---")
     
     # Distribution détaillée des âges
-    st.markdown("### 📈 Distribution Détaillée des Âges")
+    st.markdown("###  Distribution Détaillée des Âges")
     
     col_hist1, col_hist2 = st.columns([3, 1])
     
@@ -969,7 +969,7 @@ with tab4:
         st.plotly_chart(fig, use_container_width=True)
     
     with col_hist2:
-        st.markdown("#### 📊 Statistiques")
+        st.markdown("####  Statistiques")
         st.metric("Âge Moyen", f"{filtered_df['Vict Age'].mean():.1f} ans")
         st.metric("Âge Médian", f"{filtered_df['Vict Age'].median():.0f} ans")
         st.metric("Écart-type", f"{filtered_df['Vict Age'].std():.1f}")
@@ -977,7 +977,7 @@ with tab4:
     st.markdown("---")
     
     # Démographie par catégorie de crime
-    st.markdown("### 🎯 Profil des Victimes par Type de Crime")
+    st.markdown("###  Profil des Victimes par Type de Crime")
     st.markdown("*Analyse croisée : catégories de crimes × tranches d'âge*")
     
     demo_category = pd.crosstab(
@@ -1008,7 +1008,7 @@ with tab4:
     st.plotly_chart(fig, use_container_width=True)
     
     st.success("""
-    💡 **Analyse :** Ce graphique montre comment les différentes tranches d'âge sont affectées 
+     **Analyse :** Ce graphique montre comment les différentes tranches d'âge sont affectées 
     par chaque catégorie de crime. Les couleurs empilées permettent de voir la composition 
     démographique pour chaque type de criminalité.
     """)
@@ -1017,14 +1017,14 @@ with tab4:
 # ONGLET 5 : ANALYSE DES ARMES
 # =====================================
 with tab5:
-    st.markdown("## 🔫 Analyse de l'Implication des Armes")
+    st.markdown("##  Analyse de l'Implication des Armes")
     st.markdown("*Étude de l'utilisation d'armes dans les crimes*")
     st.markdown("<br>", unsafe_allow_html=True)
     
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("### 📊 Présence d'Armes")
+        st.markdown("###  Présence d'Armes")
         weapon_counts = filtered_df['weapon_involved'].value_counts()
         
         # Créer les labels et valeurs en fonction des données disponibles
@@ -1034,12 +1034,12 @@ with tab5:
         
         if 0 in weapon_counts.index:
             weapon_data.append(weapon_counts[0])
-            weapon_labels_display.append('🚫 Sans Arme')
+            weapon_labels_display.append(' Sans Arme')
             weapon_colors.append('#90EE90')
         
         if 1 in weapon_counts.index:
             weapon_data.append(weapon_counts[1])
-            weapon_labels_display.append('🔫 Avec Arme')
+            weapon_labels_display.append(' Avec Arme')
             weapon_colors.append('#FF6B6B')
         
         fig = px.pie(
@@ -1065,14 +1065,14 @@ with tab5:
             weapon_pct = 0
         
         if weapon_pct > 50:
-            st.error(f"⚠️ **{weapon_pct:.1f}%** des crimes impliquent des armes")
+            st.error(f" **{weapon_pct:.1f}%** des crimes impliquent des armes")
         elif weapon_pct > 30:
-            st.warning(f"⚠️ **{weapon_pct:.1f}%** des crimes impliquent des armes")
+            st.warning(f" **{weapon_pct:.1f}%** des crimes impliquent des armes")
         else:
-            st.success(f"✅ Seulement **{weapon_pct:.1f}%** des crimes impliquent des armes")
+            st.success(f" Seulement **{weapon_pct:.1f}%** des crimes impliquent des armes")
     
     with col2:
-        st.markdown("### 🔪 Catégories d'Armes")
+        st.markdown("###  Catégories d'Armes")
         weapon_cat = filtered_df[filtered_df['weapon_involved'] == 1]['weapon_category'].value_counts()
         
         fig = px.bar(
@@ -1094,12 +1094,12 @@ with tab5:
         st.plotly_chart(fig, use_container_width=True)
         
         if len(weapon_cat) > 0:
-            st.info(f"🔝 **Arme la plus utilisée :** {weapon_cat.index[0]} ({weapon_cat.values[0]:,} cas)")
+            st.info(f" **Arme la plus utilisée :** {weapon_cat.index[0]} ({weapon_cat.values[0]:,} cas)")
     
     st.markdown("---")
     
     # Armes par catégorie de crime
-    st.markdown("### 📊 Utilisation d'Armes par Catégorie de Crime")
+    st.markdown("###  Utilisation d'Armes par Catégorie de Crime")
     st.markdown("*Pourcentage de crimes avec armes pour chaque catégorie*")
     
     weapon_crime = pd.crosstab(
@@ -1129,7 +1129,7 @@ with tab5:
     st.markdown("---")
     
     # Armes par zone
-    st.markdown("### 📍 Taux d'Armes par Zone (Top 10)")
+    st.markdown("###  Taux d'Armes par Zone (Top 10)")
     st.markdown("*Zones avec le plus fort taux d'utilisation d'armes*")
     
     col_weapon1, col_weapon2 = st.columns([2, 1])
@@ -1159,11 +1159,11 @@ with tab5:
         st.plotly_chart(fig, use_container_width=True)
     
     with col_weapon2:
-        st.markdown("#### ⚠️ Zones à Risque")
+        st.markdown("####  Zones à Risque")
         st.markdown(f"""
         <div style='background: linear-gradient(135deg, #FF6B6B 0%, #C92A2A 100%); 
                     padding: 15px; border-radius: 10px; color: white; margin-bottom: 10px;'>
-            <p style='margin: 0; font-size: 13px;'><b>🥇 Zone #1 :</b></p>
+            <p style='margin: 0; font-size: 13px;'><b> Zone #1 :</b></p>
             <p style='margin: 5px 0 0 0; font-size: 15px; font-weight: bold;'>
                 {area_weapon.index[0]}
             </p>
@@ -1189,7 +1189,7 @@ with tab5:
         st.markdown(f"""
         <div style='background: linear-gradient(135deg, #FFD93D 0%, #F28C28 100%); 
                     padding: 15px; border-radius: 10px; color: white;'>
-            <p style='margin: 0; font-size: 13px;'><b>🥉 Zone #3 :</b></p>
+            <p style='margin: 0; font-size: 13px;'><b> Zone #3 :</b></p>
             <p style='margin: 5px 0 0 0; font-size: 15px; font-weight: bold;'>
                 {area_weapon.index[2]}
             </p>
@@ -1203,12 +1203,12 @@ with tab5:
 # ONGLET 6 : CORRÉLATIONS & TENDANCES
 # =====================================
 with tab6:
-    st.markdown("## 📈 Tendances et Corrélations")
+    st.markdown("##  Tendances et Corrélations")
     st.markdown("*Analyse approfondie des relations entre variables*")
     st.markdown("<br>", unsafe_allow_html=True)
     
     # Tendances annuelles
-    st.markdown("### 📅 Évolution Annuelle par Catégorie")
+    st.markdown("###  Évolution Annuelle par Catégorie")
     st.markdown("*Tendances des crimes au fil des années*")
     
     year_category = pd.crosstab(filtered_df['year'], filtered_df['crime_category'])
@@ -1239,9 +1239,9 @@ with tab6:
         variation = ((year_totals.iloc[-1] - year_totals.iloc[0]) / year_totals.iloc[0] * 100)
         
         if variation > 0:
-            st.warning(f"📈 **Augmentation de {variation:.1f}%** entre {first_year} et {last_year}")
+            st.warning(f"**Augmentation de {variation:.1f}%** entre {first_year} et {last_year}")
         else:
-            st.success(f"📉 **Diminution de {abs(variation):.1f}%** entre {first_year} et {last_year}")
+            st.success(f" **Diminution de {abs(variation):.1f}%** entre {first_year} et {last_year}")
     
     st.markdown("---")
     
@@ -1291,7 +1291,7 @@ with tab6:
     st.plotly_chart(fig, use_container_width=True)
     
     st.info("""
-    💡 **Comment lire cette matrice :**
+     **Comment lire cette matrice :**
     - **Rouge** : Corrélation positive forte (quand l'un augmente, l'autre augmente)
     - **Bleu** : Corrélation négative forte (quand l'un augmente, l'autre diminue)
     - **Blanc** : Pas de corrélation significative
@@ -1307,7 +1307,7 @@ with tab6:
     col1, col2 = st.columns(2)
     
     with col1:
-        st.markdown("#### 👥 Population vs Taux de Criminalité")
+        st.markdown("####  Population vs Taux de Criminalité")
         area_data = filtered_df.groupby('AREA NAME').agg({
             'DR_NO': 'count',
             'population': 'first',
@@ -1334,10 +1334,10 @@ with tab6:
         )
         st.plotly_chart(fig, use_container_width=True)
         
-        st.caption("📊 La taille des points représente le nombre total de crimes")
+        st.caption(" La taille des points représente le nombre total de crimes")
     
     with col2:
-        st.markdown("#### 💰 Revenu Médian vs Nombre de Crimes")
+        st.markdown("####  Revenu Médian vs Nombre de Crimes")
         fig = px.scatter(
             area_data,
             x='median_income',
@@ -1357,12 +1357,12 @@ with tab6:
         )
         st.plotly_chart(fig, use_container_width=True)
         
-        st.caption("📊 La taille des points représente la population de la zone")
+        st.caption(" La taille des points représente la population de la zone")
     
     st.markdown("---")
     
     # Patterns mensuels annuels
-    st.markdown("### 📅 Patterns Mensuels Multi-Années")
+    st.markdown("###  Patterns Mensuels Multi-Années")
     st.markdown("*Comparaison des cycles mensuels entre différentes années*")
     
     monthly_year = filtered_df.groupby(['year', 'month']).size().reset_index(name='count')
@@ -1389,7 +1389,7 @@ with tab6:
     st.plotly_chart(fig, use_container_width=True)
     
     st.success("""
-    💡 **Insights :** Ce graphique permet d'identifier si certains mois sont systématiquement 
+    **Insights :** Ce graphique permet d'identifier si certains mois sont systématiquement 
     plus criminels d'une année à l'autre, révélant des patterns saisonniers récurrents.
     """)
 
@@ -1424,7 +1424,7 @@ st.sidebar.markdown("---")
 st.sidebar.markdown("""
     <div style='background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); 
                 padding: 15px; border-radius: 10px; text-align: center;'>
-        <h3 style='color: white; margin: 0; font-size: 18px;'>📥 EXPORT</h3>
+        <h3 style='color: white; margin: 0; font-size: 18px;'> EXPORT</h3>
         <p style='color: white; margin: 5px 0 0 0; font-size: 13px;'>
             Téléchargez les données filtrées
         </p>
@@ -1436,7 +1436,7 @@ st.sidebar.markdown("<br>", unsafe_allow_html=True)
 # Bouton de téléchargement
 csv = filtered_df.to_csv(index=False).encode('utf-8')
 st.sidebar.download_button(
-    label="📥 Télécharger en CSV",
+    label=" Télécharger en CSV",
     data=csv,
     file_name=f"crimes_LA_filtres_{datetime.now().strftime('%Y%m%d_%H%M')}.csv",
     mime="text/csv",
@@ -1448,17 +1448,17 @@ st.sidebar.download_button(
 st.sidebar.markdown(f"""
 <div style='background: #f0f2f6; padding: 10px; border-radius: 8px; margin-top: 10px;'>
     <p style='margin: 0; font-size: 12px; color: #666;'>
-        📊 Fichier contiendra : <b>{len(filtered_df):,} lignes</b>
+         Fichier contiendra : <b>{len(filtered_df):,} lignes</b>
     </p>
     <p style='margin: 5px 0 0 0; font-size: 12px; color: #666;'>
-        📁 Colonnes : <b>{len(filtered_df.columns)}</b>
+         Colonnes : <b>{len(filtered_df.columns)}</b>
     </p>
 </div>
 """, unsafe_allow_html=True)
 
 # Informations supplémentaires
 st.sidebar.markdown("---")
-st.sidebar.markdown("### ℹ️ Aide")
+st.sidebar.markdown("### Aide")
 st.sidebar.info("""
 **Besoin d'aide ?**
 
@@ -1466,6 +1466,4 @@ st.sidebar.info("""
 - **Survolez** les graphiques pour plus de détails
 - **Cliquez** sur les légendes pour filtrer les catégories
 - Les onglets offrent différentes perspectives d'analyse
-
-📧 Contact : crime-analysis@example.com
-""")
+)
