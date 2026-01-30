@@ -1,6 +1,6 @@
-# 🚀 Guide de Démarrage Rapide - Dashboard Criminalité LA
+#  Guide de Démarrage Rapide - Dashboard Criminalité LA
 
-## 📱 Accès Rapide
+##  Accès Rapide
 
 ### Lancer l'application
 ```bash
@@ -14,7 +14,7 @@ http://localhost:8501
 
 ---
 
-## 🎯 Les 5 Choses à Savoir
+##  Les 5 Choses à Savoir
 
 ### 1. 📖 Commencez par Lire "À propos du projet"
 Cliquez sur la section extensible en haut de la page pour comprendre :
@@ -31,7 +31,7 @@ Cliquez sur la section extensible en haut de la page pour comprendre :
 
 💡 **Astuce** : Le compteur en bas des filtres montre combien d'incidents correspondent à vos critères
 
-### 3. 🗂️ Explorez les 6 Onglets
+### 3.  Explorez les 6 Onglets
 Chaque onglet offre une perspective différente :
 
 | Onglet | Contenu |
@@ -43,13 +43,13 @@ Chaque onglet offre une perspective différente :
 | 🔫 Analyse des Armes | Quelles armes sont utilisées ? |
 | 📈 Corrélations | Relations entre variables |
 
-### 4. 📊 Interagissez avec les Graphiques
+### 4.  Interagissez avec les Graphiques
 - **Survolez** les éléments pour voir les détails
 - **Cliquez** sur les légendes pour filtrer
 - **Zoomez** sur les cartes et graphiques
 - **Lisez** les messages colorés (insights automatiques)
 
-### 5. 📥 Exportez Vos Données
+### 5.  Exportez Vos Données
 En bas de la barre latérale :
 - Cliquez sur "📥 Télécharger en CSV"
 - Le fichier contient toutes les données filtrées
@@ -57,7 +57,7 @@ En bas de la barre latérale :
 
 ---
 
-## 🎨 Comprendre les Couleurs
+## Comprendre les Couleurs
 
 ### Cartes KPIs (en haut)
 - **Violet** 🟣 : Total des crimes
@@ -74,7 +74,7 @@ En bas de la barre latérale :
 
 ---
 
-## 💡 Exemples d'Analyses Possibles
+##  Exemples d'Analyses Possibles
 
 ### Analyse 1 : "Quels sont les quartiers les plus dangereux en 2023 ?"
 1. Filtre **Année** : Sélectionner uniquement 2023
@@ -102,7 +102,7 @@ En bas de la barre latérale :
 
 ---
 
-## ⚡ Raccourcis Clavier
+##  Raccourcis Clavier
 
 - **R** : Recharger l'application (après modification des filtres)
 - **Ctrl/Cmd + clic** : Ouvrir un lien dans un nouvel onglet
@@ -110,7 +110,7 @@ En bas de la barre latérale :
 
 ---
 
-## ❓ FAQ - Questions Fréquentes
+##  FAQ - Questions Fréquentes
 
 ### Q : Pourquoi certains graphiques mettent du temps à charger ?
 **R** : Le dashboard analyse plus de 50 000 incidents. Les calculs peuvent prendre quelques secondes selon vos filtres.
@@ -132,7 +132,7 @@ En bas de la barre latérale :
 
 ---
 
-## 🆘 Résolution de Problèmes
+##  Résolution de Problèmes
 
 ### Problème : L'application ne se lance pas
 ```bash
@@ -164,7 +164,7 @@ pip install -r requirements.txt
 
 ---
 
-## 📚 Pour Aller Plus Loin
+##  Pour Aller Plus Loin
 
 ### Personnalisation
 Le fichier `streamlit_app.py` est entièrement modifiable :
@@ -200,7 +200,7 @@ Le fichier `streamlit_app.py` est entièrement modifiable :
 
 ---
 
-## ✅ Checklist de Maîtrise
+##  Checklist de Maîtrise
 
 - [ ] J'ai lu la section "À propos du projet"
 - [ ] J'ai exploré les 6 onglets
@@ -213,20 +213,20 @@ Le fichier `streamlit_app.py` est entièrement modifiable :
 
 ---
 
-## 🎯 Défis d'Analyse
+##  Défis d'Analyse
 
 Testez vos compétences avec ces défis :
 
-### 🥉 Défi Bronze
+###  Défi Bronze
 Trouvez le quartier avec le plus de crimes en 2023
 
-### 🥈 Défi Argent
+###  Défi Argent
 Identifiez quelle tranche d'âge est la plus touchée par les crimes avec armes
 
-### 🥇 Défi Or
+###  Défi Or
 Découvrez s'il existe une corrélation entre le revenu médian d'un quartier et son taux de criminalité
 
-### 💎 Défi Diamant
+###  Défi Diamant
 Créez un profil complet du crime le plus fréquent : type, zone, moment, victime type
 
 ---
