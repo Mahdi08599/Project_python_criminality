@@ -1,10 +1,10 @@
-# 📚 GUIDE PÉDAGOGIQUE COMPLET - ANALYSE DE DONNÉES CRIMINELLES
+#  GUIDE PÉDAGOGIQUE COMPLET - ANALYSE DE DONNÉES CRIMINELLES
 
 ## Pour les Débutants en Python et Data Science
 
 ---
 
-## 📖 TABLE DES MATIÈRES
+##  TABLE DES MATIÈRES
 
 1. [Introduction au Projet](#introduction)
 2. [Qu'est-ce que Python ?](#python)
@@ -18,7 +18,7 @@
 
 ---
 
-## 🎯 INTRODUCTION AU PROJET {#introduction}
+##  INTRODUCTION AU PROJET {#introduction}
 
 ### Qu'avons-nous fait ?
 
@@ -38,7 +38,7 @@ Imaginez que vous avez un énorme tableau Excel avec 50,000 lignes contenant des
 
 ---
 
-## 💻 QU'EST-CE QUE PYTHON ? {#python}
+##  QU'EST-CE QUE PYTHON ? {#python}
 
 ### Python en Termes Simples
 
@@ -69,7 +69,7 @@ Pensez aux bibliothèques comme des boîtes à outils spécialisées :
 
 ---
 
-## 🧹 PHASE 1 : NETTOYAGE DES DONNÉES {#phase1}
+##  PHASE 1 : NETTOYAGE DES DONNÉES {#phase1}
 
 ### Pourquoi Nettoyer les Données ?
 
@@ -182,7 +182,7 @@ df_clean = df[(df['Vict Age'] >= 0) & (df['Vict Age'] <= 120)]
 
 **Résultat** : Suppression des âges impossibles (négatifs ou >120 ans)
 
-### 📊 Résultat de la Phase 1
+###  Résultat de la Phase 1
 
 **Fichier créé** : `data/Crime_Data_Cleaned.csv`
 
@@ -352,7 +352,7 @@ pivot_area_time = df.pivot_table(
 
 **Analogie** : C'est comme un tableau croisé dynamique dans Excel !
 
-### 📊 Résultat de la Phase 2
+###  Résultat de la Phase 2
 
 **Fichiers créés** :
 - `data/Crime_Data_Transformed.csv` (avec 48 colonnes au total)
@@ -363,7 +363,7 @@ pivot_area_time = df.pivot_table(
 
 ---
 
-## 📊 PHASE 3 : ANALYSE EXPLORATOIRE (EDA) {#phase3}
+##  PHASE 3 : ANALYSE EXPLORATOIRE (EDA) {#phase3}
 
 ### Qu'est-ce que l'EDA ?
 
@@ -536,7 +536,7 @@ plt.show()
 
 ---
 
-## 🤖 PHASE 4 : MODÉLISATION PRÉDICTIVE (MACHINE LEARNING) {#phase4}
+##  PHASE 4 : MODÉLISATION PRÉDICTIVE (MACHINE LEARNING) {#phase4}
 
 ### Qu'est-ce que le Machine Learning ?
 
@@ -690,7 +690,7 @@ plt.show()
 
 **Découverte** : L'heure et la zone sont les facteurs les plus importants
 
-### 📊 Résultat de la Phase 4
+###  Résultat de la Phase 4
 
 **Fichiers créés** :
 - `models/crime_category_classifier_model.pkl` (5 MB)
@@ -704,7 +704,7 @@ plt.show()
 
 ---
 
-## 🌐 PHASE 5 : DASHBOARD INTERACTIF {#phase5}
+##  PHASE 5 : DASHBOARD INTERACTIF {#phase5}
 
 ### Qu'est-ce qu'un Dashboard ?
 
@@ -853,7 +853,7 @@ streamlit run streamlit_app.py
 
 **Accès** : Ouvrir le navigateur sur http://localhost:8501
 
-### 📊 Résultat de la Phase 5
+###  Résultat de la Phase 5
 
 **Fichier créé** : `streamlit_app.py` (695 lignes)
 
@@ -867,7 +867,7 @@ streamlit run streamlit_app.py
 
 ---
 
-## 🧠 CONCEPTS TECHNIQUES EXPLIQUÉS {#concepts}
+##  CONCEPTS TECHNIQUES EXPLIQUÉS {#concepts}
 
 ### 1. Variables et Types de Données
 
@@ -1093,7 +1093,7 @@ recall = recall_score(y_true, y_pred)
 
 ---
 
-## 🎯 RÉSUMÉ FINAL
+##  RÉSUMÉ FINAL
 
 ### Ce que nous avons appris :
 
