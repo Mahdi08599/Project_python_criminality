@@ -1,4 +1,4 @@
-# 📊 RAPPORT DE PROJET
+#  RAPPORT DE PROJET
 
 ## Analyse Prédictive de la Criminalité à Los Angeles
 ### Approche Data Science et Machine Learning
