@@ -1,10 +1,10 @@
 # Crime Data Analysis Project 🚔
 
-## 📊 Project Overview
+##  Project Overview
 
 This comprehensive data analysis project explores crime data from Los Angeles (2020 to Present), applying data science techniques including data cleaning, transformation, exploratory data analysis, and interactive visualization.
 
-### 🆕 **Version 2.0 - Dashboard Français Amélioré** (Novembre 2025)
+###  **Version 2.0 - Dashboard Français Amélioré** (Novembre 2025)
 Le dashboard a été entièrement **redesigné et traduit en français** avec :
 - ✨ Interface moderne et professionnelle
 - 🎯 Filtres intelligents et intuitifs
@@ -13,12 +13,12 @@ Le dashboard a été entièrement **redesigné et traduit en français** avec :
 - 🎨 Design avec gradients et animations
 - 📥 Export de données simplifié
 
-👉 **[Guide de Démarrage Rapide](GUIDE_DEMARRAGE_RAPIDE.md)** | **[Détails des Améliorations](AMELIORATIONS_DASHBOARD.md)**
+**[Guide de Démarrage Rapide](GUIDE_DEMARRAGE_RAPIDE.md)** | **[Détails des Améliorations](AMELIORATIONS_DASHBOARD.md)**
 
 App : https://crime-app-viz.streamlit.app/
 ---
 
-## 🎯 Objectives
+##  Objectives
 
 - Clean and preprocess large-scale crime datasets
 - Perform comprehensive exploratory data analysis (EDA)
@@ -27,7 +27,7 @@ App : https://crime-app-viz.streamlit.app/
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 Project_python_criminality/
@@ -66,11 +66,11 @@ Project_python_criminality/
 └── README.md                                 # 📖 This file
 ```
 
-> 💡 **See [ARCHITECTURE.md](ARCHITECTURE.md) for detailed project architecture**
+>  **See [ARCHITECTURE.md](ARCHITECTURE.md) for detailed project architecture**
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -92,7 +92,7 @@ Project_python_criminality/
 
 ---
 
-## 📚 Project Workflow
+##  Project Workflow
 
 ### Step 1: Data Cleaning (`data_cleaning.ipynb`)
 
@@ -138,7 +138,7 @@ Project_python_criminality/
 
 ---
 
-## 🎨 Interactive Dashboard
+##  Interactive Dashboard
 
 ### Running the Streamlit App
 
@@ -176,7 +176,7 @@ The dashboard will open in your browser at `http://localhost:8501`
 
 ---
 
-## 📊 Key Insights
+##  Key Insights
 
 ### Crime Patterns
 
@@ -205,7 +205,7 @@ The dashboard will open in your browser at `http://localhost:8501`
 
 ---
 
-## 🛠️ Technologies Used
+##  Technologies Used
 
 - **Data Processing**: pandas, numpy
 - **Visualization**: matplotlib, seaborn, plotly
@@ -214,7 +214,7 @@ The dashboard will open in your browser at `http://localhost:8501`
 
 ---
 
-## 📝 Usage Examples
+##  Usage Examples
 
 ### Load Cleaned Data
 
@@ -238,7 +238,7 @@ print(df.columns)
 
 ---
 
-## 🔮 Future Enhancements
+##  Future Enhancements
 
 1. **Real-time Data Integration**
    - Connect to live crime data feeds
@@ -261,24 +261,26 @@ print(df.columns)
 
 ---
 
-## 👥 Contributors
+##  Contributors
 
 - **Alaa** - Data Analysis & Modeling
+- **Mahdi** - Data Transformation & Explorary 
 - **Team** - Project Development
+  
 
 ---
 
-## 📄 License
+##  License
 
 This project is part of an academic assignment and is intended for educational purposes.
 
 ---
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - Data source: Los Angeles Open Data Portal
 - Course: Data Science with Python
-- Institution: [Your Institution Name]
+- Institution: [Paris School OF technology&Business]
 
 ---
 
@@ -291,7 +293,7 @@ For questions or collaboration:
 
 ---
 
-## 🎯 Project Milestones
+##  Project Milestones
 
 - ✅ Data Cleaning & Preprocessing
 - ✅ Feature Engineering & Transformation
