@@ -16,13 +16,13 @@ http://localhost:8501
 
 ##  Les 5 Choses à Savoir
 
-### 1. 📖 Commencez par Lire "À propos du projet"
+### 1.  Commencez par Lire "À propos du projet"
 Cliquez sur la section extensible en haut de la page pour comprendre :
 - L'objectif du dashboard
 - Les données analysées
 - Comment l'utiliser
 
-### 2. 🎛️ Utilisez les Filtres (Barre Latérale Gauche)
+### 2.  Utilisez les Filtres (Barre Latérale Gauche)
 - **Années** : Sélectionnez la période d'analyse
 - **Zones** : Choisissez les quartiers de Los Angeles
 - **Crimes** : Filtrez par type de criminalité
