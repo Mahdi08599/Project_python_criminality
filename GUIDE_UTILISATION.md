@@ -1,10 +1,10 @@
-# 📋 GUIDE D'UTILISATION RAPIDE
+#  GUIDE D'UTILISATION RAPIDE
 
 ## Crime Data Analysis Project - Los Angeles
 
 ---
 
-## ✨ Démarrage Ultra-Rapide
+##  Démarrage Ultra-Rapide
 
 ### Option 1 : Lanceur Automatique (Recommandé)
 ```bash
@@ -38,7 +38,7 @@ jupyter notebook notebooks/
 
 ---
 
-## 📁 Organisation des Fichiers
+##  Organisation des Fichiers
 
 ```
 🏠 Racine du projet
@@ -58,9 +58,9 @@ jupyter notebook notebooks/
 
 ---
 
-## 🎯 Accès Rapide aux Composants
+##  Accès Rapide aux Composants
 
-### 🌐 Dashboard Web
+###  Dashboard Web
 **URL après lancement** : http://localhost:8501
 
 **Fonctionnalités** :
@@ -77,7 +77,7 @@ python launch.py dashboard
 streamlit run streamlit_app.py
 ```
 
-### 📓 Notebooks Jupyter
+###  Notebooks Jupyter
 **Ordre d'exécution** :
 1. `notebooks/data_cleaning.ipynb` (2-3 min)
 2. `notebooks/data_transformation.ipynb` (3-5 min)
@@ -90,7 +90,7 @@ python launch.py jupyter
 jupyter notebook notebooks/
 ```
 
-### 📊 Données
+###  Données
 **Fichiers disponibles** :
 - `data/Crime_Data_from_2020_to_Present_50k.csv` (Brut - 50k records)
 - `data/Crime_Data_Cleaned.csv` (Nettoyé)
@@ -99,7 +99,7 @@ jupyter notebook notebooks/
 
 ---
 
-## 🔧 Installation & Configuration
+##  Installation & Configuration
 
 ### Prérequis
 ```bash
@@ -129,7 +129,7 @@ python launch.py dashboard
 
 ---
 
-## 📚 Documentation Complète
+##  Documentation Complète
 
 ### Guides Disponibles
 | Document | Description | Chemin |
@@ -152,7 +152,7 @@ cat docs/QUICK_START.md
 
 ---
 
-## ⚡ Commandes Essentielles
+##  Commandes Essentielles
 
 ### Développement
 ```bash
